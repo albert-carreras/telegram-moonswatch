@@ -21,7 +21,7 @@ jobs:
           key: npm-${{ hashFiles('package-lock.json') }}
           restore-keys: npm-
       - name: Check for watch
-        run: npm ci --ignore-scripts && npm run task
+        run: npm ci && npm run task
       - name: Watch is there!!!
         if: success()
         uses: appleboy/telegram-action@master
