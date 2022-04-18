@@ -46,7 +46,7 @@ const runPuppeteer = async (url) => {
     console.log('checking page')
     const result = dom.window.document.querySelector('[data-widget="productDetailAddToCart"]');
     if (result) {
-        const success = result.disabled;
+        const success = !result.disabled;
         console.log(success, 'success');
         await browser.close();
         return success;
