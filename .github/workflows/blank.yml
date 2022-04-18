@@ -1,0 +1,14 @@
+name: Watch is there!!!
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+uses: appleboy/telegram-action@master
+  env:
+    GITHUB_CONTEXT: ${{ toJSON(github) }}
+  with:
+    to: ${{ secrets.TELEGRAM_ID }}
+    token: ${{ secrets.TELEGRAM_TOKEN }}
+    format: markdown
+    message: |
+      buy https://www.swatch.com/nl-nl/mission-to-the-moon-so33m100/SO33M100.html
