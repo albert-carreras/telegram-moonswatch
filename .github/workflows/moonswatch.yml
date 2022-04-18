@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check for watch
-          run: npm install && npm run task
+        run: npm install && npm run task
       - name: Watch is there!!!
         if: success()
         uses: appleboy/telegram-action@master
